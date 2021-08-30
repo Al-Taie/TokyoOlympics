@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="shapeAppearance.radius" parent="shapeAppearance" />
+
+    <style name="shapeAppearance">
+        <item name="cornerRadius">6dp</item>
+        <item name="cornerSize">6dp</item>
+        <item name="elevation">8dp</item>
+    </style>
+
+    <style name="Constraint">
+        <item name="layout_constraintTop_toTopOf">@id/title_position</item>
+        <item name="layout_constraintBottom_toBottomOf">@id/title_position</item>
+    </style>
+
+    <style name="TextTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextTitle.General">
+        <item name="layout_constraintTop_toTopOf">@id/title_position</item>
+        <item name="layout_constraintBottom_toBottomOf">@id/title_position</item>
+    </style>
+
+    <style name="ImageStyle" parent="Constraint">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <style name="GuideLine">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="layout_constraintGuide_percent">0.5</item>
+    </style>
+</resources>

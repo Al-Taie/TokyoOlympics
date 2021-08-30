@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_margin="16dp"
+    android:backgroundTint="#F9F9F9"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rank_card"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/rank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:text="1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/flag_image"
+            android:layout_width="38dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="18dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/rank_card"
+            app:layout_constraintStart_toEndOf="@id/rank_card"
+            app:layout_constraintTop_toTopOf="@id/rank_card"
+            app:shapeAppearanceOverlay="@style/shapeAppearance.radius"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/country_iso3"
+            style="@style/TextTitle"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/flag_image"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toEndOf="@+id/flag_image"
+            app:layout_constraintTop_toTopOf="@+id/flag_image"
+            tools:text="China" />
+
+        <TextView
+            android:id="@+id/gold"
+            style="@style/TextTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/country_iso3"
+            app:layout_constraintEnd_toStartOf="@+id/silver"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/country_iso3"
+            tools:text="21" />
+
+        <TextView
+            android:id="@+id/silver"
+            style="@style/TextTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/gold"
+            app:layout_constraintEnd_toStartOf="@+id/bronze"
+            app:layout_constraintStart_toEndOf="@id/gold"
+            app:layout_constraintTop_toTopOf="@+id/gold"
+            tools:text="21" />
+
+        <TextView
+            android:id="@+id/bronze"
+            style="@style/TextTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/gold"
+            app:layout_constraintEnd_toStartOf="@+id/total"
+            app:layout_constraintStart_toEndOf="@id/silver"
+            app:layout_constraintTop_toTopOf="@+id/gold"
+            tools:text="16" />
+
+        <TextView
+            android:id="@+id/total"
+            style="@style/TextTitle"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/gold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bronze"
+            app:layout_constraintTop_toTopOf="@+id/gold"
+            tools:text="69" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            style="@style/GuideLine" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
